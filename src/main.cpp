@@ -33,13 +33,13 @@ void menu() {
       adicionarDespesa(nome, valor);
       break;
     case 3:
-      cout << "Digite o index da dispesa que deseja remover: ";
+      cout << "Digite o Número da dispesa que deseja remover: ";
       cin >> idx;
       cout << "\n";
       removerDespesa(idx);
       break;
     case 4:
-      cout << "Digite o index da dispesa que deseja atualizar: ";
+      cout << "Digite o Número da dispesa que deseja atualizar: ";
       cin >> idx;
       cout << "Digite o novo nome para a dispesa: ";
       cin >> nome;
@@ -97,7 +97,7 @@ void removerDespesa(int index) {
       i++;
     }
     if (i < index) {
-      cout << "Index invalido nada foi removido\n";
+      cout << "Iten invalido, nada foi removido\n";
     }
     file.close();
     ofile.open("despesas.txt");
@@ -129,7 +129,7 @@ void atualizarDespesa(int index, string new_name, double new_valor) {
       i++;
     }
     if (i < index) {
-      cout << "Index invalido nada foi atualizado\n";
+      cout << "Iten invalido, nada foi atualizado\n";
     }
     file.close();
     ofile.open("despesas.txt");
